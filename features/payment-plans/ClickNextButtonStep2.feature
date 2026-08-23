@@ -44,3 +44,12 @@ Feature: Click on the next button on payment plans page
         Then the review step stepper circle is blue
         And the payment plan stepper circle is green
         And the start application stepper circle is green
+
+
+    @sep16-3
+    Scenario: price summary should be displayed after selecting a payment
+        When user clicks "upfront" payment plan
+        Then the upfront payment summary is displayed
+        When user clicks "installments" payment plan
+        Then the installments payment summary is displayed
+        And the back button is displayed and enabled

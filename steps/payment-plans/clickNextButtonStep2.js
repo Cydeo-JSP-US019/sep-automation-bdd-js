@@ -35,3 +35,22 @@ Then('the payment plan stepper circle is green', async function () {
 Then('the start application stepper circle is green', async function () {
     await expect(startApplicationPage.startApplicationStepCircle).toHaveCSS("background-color", "rgb(172, 245, 138)");
 });
+
+
+Then('the upfront payment summary is displayed', async function () {
+    await expect(paymentPlanPage.basePriceAmountUnderUpfront).toBeVisible();
+    await expect(paymentPlanPage.upfrontDiscountAmountUnderUpfront).toBeVisible();
+    await expect(paymentPlanPage.subtotalAmountUnderUpfront).toBeVisible();
+});
+
+Then('the installments payment summary is displayed', async function () {
+    await expect(paymentPlanPage.basePriceAmountUnderInstallments).toBeVisible();
+    await expect(paymentPlanPage.installmentsNumberUnderInstallments).toBeVisible();
+    await expect(paymentPlanPage.pricePerInstallmentsAmountUnderInstallments).toBeVisible();
+    await expect(paymentPlanPage.firstMonthPaymentAmountUnderInstallments).toBeVisible();
+});
+
+Then('the back button is displayed and enabled', async function () {
+    await expect(paymentPlanPage.backButton).toBeVisible();
+    await expect(paymentPlanPage.backButton).toBeEnabled();
+});
