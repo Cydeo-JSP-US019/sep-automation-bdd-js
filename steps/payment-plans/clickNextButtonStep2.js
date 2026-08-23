@@ -4,8 +4,6 @@ import { paymentPlanPage, page, startApplicationPage } from "../../globalPagesSe
 import { productInfo } from "../../utilities/qa-data-reader.js";
 
 
-
-
 Then('the next button is disabled by default', async function () {
     await expect(paymentPlanPage.inactiveNextButton).toBeVisible();
     await expect(paymentPlanPage.inactiveNextButton).toBeDisabled();
@@ -20,4 +18,20 @@ Then('the next button is enabled', async function () {
     await expect(paymentPlanPage.activeNextButton).toBeVisible();
     await expect(paymentPlanPage.activeNextButton).toBeEnabled();
     
+});
+
+When('user clicks on the next button of payment plan page', async function () {
+    await paymentPlanPage.clickNextButton();
+});
+
+Then('the review step stepper circle is blue', async function () {
+    await expect(startApplicationPage.reviewStepCircle).toHaveCSS("background-color", "rgb(1, 201, 255)");
+});
+
+Then('the payment plan stepper circle is green', async function () {
+    await expect(startApplicationPage.paymentPlanStepCircle).toHaveCSS("background-color", "rgb(172, 245, 138)");
+});
+
+Then('the start application stepper circle is green', async function () {
+    await expect(startApplicationPage.startApplicationStepCircle).toHaveCSS("background-color", "rgb(172, 245, 138)");
 });

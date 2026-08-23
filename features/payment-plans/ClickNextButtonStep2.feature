@@ -37,3 +37,10 @@ Feature: Click on the next button on payment plans page
             | upfront      |
             | installments |
 
+    @sep16-2
+    Scenario: clicking on next button navigates to step 3 page
+        When user clicks "upfront" payment plan
+        And user clicks on the next button of payment plan page
+        Then the review step stepper circle is blue
+        And the payment plan stepper circle is green
+        And the start application stepper circle is green
