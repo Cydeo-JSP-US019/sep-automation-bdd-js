@@ -37,4 +37,3 @@ Feature: Click on the next button on payment plans page
             | upfront      |
             | installments |
 
-    # come back at 11:50 AM EST
