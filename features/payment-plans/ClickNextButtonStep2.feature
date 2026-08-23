@@ -10,3 +10,31 @@ Feature: Click on the next button on payment plans page
     #* AC5: A price summary should be displayed.
     #* AC6: The back button should be displayed and enabled.
 
+
+    Background:
+        Given user is on the enrollment page
+        And user has completed start application step
+
+
+    #Scenario: Clicking on upfront payment plan activates the next button
+    #    Then the next button is disabled by default
+    #    When user clicks upfront payment plan
+    #    Then the next button is enabled
+
+    #Scenario: Clicking on installments payment plan activates the next button
+    #    Then the next button is disabled by default
+    #    When user clicks installments payment plan
+    #    Then the next button is enabled
+
+    @sep16-1
+    Scenario Outline: Clicking on any payment plan activates the next button
+        Then the next button is disabled by default
+        When user clicks "<payment_plan>" payment plan
+        Then the next button is enabled
+
+        Example:
+            | payment_plan |
+            | upfront      |
+            | installments |
+
+    # come back at 11:50 AM EST
