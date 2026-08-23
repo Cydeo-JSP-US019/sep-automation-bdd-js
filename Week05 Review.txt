@@ -5,3 +5,4 @@ Week 05 Review:
     4. Fixtures (request, baseURL)
 
 
+Class starts at 10:05 AM EST
