@@ -1,8 +1,41 @@
 Week 05 Review:
     1. SEP Playwright BDD framework
     2. Jenkins Jobs for SEP
-    3. GitHub Actions Workflow for SEP
-    4. Fixtures (request, baseURL)
+    3. Fixtures (request, baseURL)
+
+    Assignment: GitHub Actions Workflow for SEP
+
+BDD layers:
+
+    1. Business layer
+            Create feature files for scenarios (Declarative steps) - written in Gherkin
+
+    2. Technical layer
+            Generating Step definitions -> work on the automation script
+
+POM (Page Object Model):
+        for each web page, we create a page class.
+        We will store web page' elements and actions in its page class.
+        which allows us to reuse them in tests
 
 
-Class starts at 10:05 AM EST
+Next Week:
+    During the week days:
+        module06 Recordings ====> TypeScript
+        TDD Framework with TypeScript
+
+        get a one mont subscription of antigravity IDE and install it:
+            https://antigravity.google/download#antigravity-ide
+
+
+    During the live class:
+        TDD vs BDD
+        API testing
+        Interview questions
+
+        Using antigravity for creating frameworks from scratch
+        Exploratory testing with Antrigravity' autonomous browser agents
+
+
+
+
