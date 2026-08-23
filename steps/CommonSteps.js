@@ -22,3 +22,8 @@ Given('user has completed start application step', async function () {
   await startApplicationPage.clickNextButton();
 });
 
+Given('user has completed payment plan step', async function () {
+  await paymentPlanPage.selectPaymentPlan("Upfront");
+  await paymentPlanPage.clickNextButton();
+});
+
