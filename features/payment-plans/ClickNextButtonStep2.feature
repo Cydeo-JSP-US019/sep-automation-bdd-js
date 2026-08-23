@@ -32,7 +32,7 @@ Feature: Click on the next button on payment plans page
         When user clicks "<payment_plan>" payment plan
         Then the next button is enabled
 
-        Example:
+        Examples:
             | payment_plan |
             | upfront      |
             | installments |
